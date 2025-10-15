@@ -1,0 +1,45 @@
+.container {
+
+    .header {
+        padding-block: 20px;
+        background-color: var(--primary-500);
+
+        h2 {
+            font-size: 48px;
+            font-weight: 800;
+            color: white;
+        }
+    }
+
+    .jobs {
+        margin-top: 16px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        .jobsList {
+            flex: 0.45;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 2rem;
+
+            gap: 16px;
+
+            @media (max-width: 999.5px) {
+                flex: 1;
+            }
+        }
+
+        .jobDetails {
+            position: sticky;
+            padding-top: 1rem;
+            top: 0;
+            flex: 0.5;
+            height: 100vh;
+            overflow: hidden;
+
+
+            /* padding-bottom: .5rem; */
+        }
+    }
+}

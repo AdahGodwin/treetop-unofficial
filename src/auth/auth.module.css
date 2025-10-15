@@ -1,0 +1,144 @@
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .auth {
+       position: relative;
+        /* margin: 1rem; */
+        transition: all 1s ease-in-out;
+        display: flex;
+        height: 90vh;
+        overflow: hidden;
+
+        @media (min-width: 850.5px) {
+            margin: 1rem;
+            box-shadow: 0 0 48px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        .authContent {
+            z-index: 5;
+            padding-block: 2rem;
+            text-align: center;
+            flex: .45;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 21px;
+            padding-inline: 80px;
+            background-color: var(--primary-500);
+            color: white;
+
+            h1 {
+                font-size: 48px;
+                font-weight: 800;
+                margin-top: 20px;
+            }
+
+            p {
+                margin-top: 20px;
+                font-size: 24px;
+                font-weight: 400;
+                max-width: 400px;
+            }
+
+            button {
+                margin-top: 20px;
+                width: 100%;
+                padding: 12px 0;
+                border-radius: 8px;
+                background-color: var(--primary-50);
+                color: var(--primary-500);
+                border: none;
+                font-size: 24px;
+                font-weight: 600;
+            }
+        }
+
+        .authForm {
+            position: relative;
+            flex: .55;
+            padding-inline: 80px;
+            align-content: center;
+            text-align: center;
+            padding-block: 2rem;
+
+            @media (max-width: 850px) {
+                flex: 1;
+                padding-inline: 1.5rem;
+            }
+
+            .formContent {
+                h2 {
+                    margin-bottom: 24px;
+                    font-size: 40px;
+                    font-weight: 800;
+                    color: var(--primary-500);
+                }
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+
+                    .userType {
+                        display: flex;
+                        gap: 16px;
+                        justify-content: center;
+                        align-items: center;
+
+                        input[type="checkbox"] {
+                            margin-right: 8px;
+                            width: 20px;
+                            height: 20px;
+                            accent-color: var(--primary-500);
+                            outline: none;
+
+                        }
+
+                        label {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-weight: 600;
+                            text-transform: capitalize;
+                        }
+                    }
+
+                    button {
+                        background-color: var(--primary-500);
+                        border: none;
+                        color: white;
+                        padding: 16px;
+                        font-size: 24px;
+                        font-weight: 600;
+                        border-radius: 8px;
+                    }
+
+                    .forgotPassword {
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        text-align: center;
+                    }
+                }
+                .toggle {
+                    margin-top: 12px;
+                    font-size: 18px;
+                    color: var(--primary-500);
+                }
+            }
+        }
+    }
+
+    .arrowBack {
+        z-index: 50;
+        position: absolute;
+        top: 10%;
+        left: 5%;
+    }
+}

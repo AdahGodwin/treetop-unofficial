@@ -1,0 +1,39 @@
+.input {
+  flex: 1;
+  position: relative;
+  border: 1px solid #B0B0B0;
+  border-radius: 16px;
+  padding: 12px 12px;
+  /* height: 54px; */
+  .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8A8A8A;
+  }
+
+  input {
+    outline: none;
+    width: 100%;
+    border: none;
+    padding-left: 20px;
+    /* space for the icon */
+    height: 35px;
+    font-size: 14px;
+    &::placeholder {
+      color: #8A8A8A;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  .passwordIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8A8A8A;
+    cursor: pointer;
+  }
+}

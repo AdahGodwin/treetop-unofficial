@@ -1,0 +1,16 @@
+.container {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .formRow {
+        display: flex;
+        gap: 24px;
+        
+          @media (max-width: 500px) {
+            flex-direction: column;
+        }
+    }
+
+}

@@ -1,0 +1,74 @@
+:root {
+  --primary-500: #117C79;
+  --primary-50: #E7F2F2;
+  --white-600: #E8E8E8;
+  --secondary-500: #95C63E;
+
+  /* black */
+  --black-50: #E6E6E6;
+  --black-100: #B0B0B0;
+  --black-200: #8A8A8A;
+  --black-300: #545454;
+
+}
+
+@font-face {
+  font-family: "Trap";
+  src: url("assets/fonts/Trap-Regular.otf");
+
+}
+
+@font-face {
+  font-family: "Trap";
+  src: url("assets/fonts/Trap-Bold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Trap";
+  src: url("assets/fonts/Trap-SemiBold.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Trap";
+  src: url("assets/fonts/Trap-ExtraBold.otf");
+  font-weight: 800;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Trap";
+}
+
+.padding {
+   padding: 0 12rem;
+
+  @media (max-width: 1300px) {
+   padding: 0 3rem;
+    
+  }
+   @media (max-width: 700px) {
+   padding: 0 1.5rem;
+    
+  }  
+}
+
+textarea {
+  height: 300px;
+  outline: none;
+  width: 100%;
+  border: 1px solid #B0B0B0;
+  border-radius: 16px;
+  padding: 12px 40px;
+  font-size: 14px;
+  resize: none;
+
+  &::placeholder {
+    color: #8A8A8A;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
