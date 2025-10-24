@@ -1,5 +1,5 @@
-import Input from '../../../components/input/Input';
-import classes from './personal-info.module.css';
+import Input from '../../../shared/components/input/Input';
+import classes from './personal-info.module.scss';
 const PersonalInfo = () => {
   return (
     <form className={classes.container}>

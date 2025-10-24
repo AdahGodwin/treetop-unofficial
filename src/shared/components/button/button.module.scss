@@ -15,4 +15,10 @@
         border: 3px solid var(--primary-500);
         border-radius: 8px;
     }
+
+    &[data-secondary="true"] {
+        background-color: var(--secondary-500);
+        border: none;
+        color: white;
+}
 }

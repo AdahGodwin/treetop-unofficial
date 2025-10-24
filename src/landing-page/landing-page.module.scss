@@ -1,0 +1,115 @@
+.container {
+  .hero {
+    padding-block: 40px;
+    height: 100vh;
+    background-color: var(--primary-500);
+    color: white;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+
+    .heroContent {
+      width: 51%;
+      //   padding-block: 27.5px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      align-items: flex-start;
+
+      .title {
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 120%;
+      }
+      .subtitle {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+      }
+      .secureText,
+      .trustedText,
+      .qualifiedText {
+        color: var(--secondary-500);
+      }
+    }
+
+    .heroImage {
+      width: 49%;
+      height: 100%;
+      img {
+        border-radius: 16px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .availableJobs {
+
+    display: flex;
+    flex-direction: column;
+
+    .jobs {
+    //   padding-bottom: 2rem;
+      gap: 16px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    
+      @media (max-width: 999.5px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .insights {
+    display: flex;
+    flex-direction: column;
+
+    .blogs {
+      padding-bottom: 2rem;
+      gap: 16px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    
+      @media (max-width: 999.5px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .seeMoreButton {
+    margin-block: 40px;
+    background-color: var(--primary-500);
+    border: none;
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  h2 {
+    padding-block: 40px;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--primary-500);
+    text-align: center;
+  }
+}

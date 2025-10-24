@@ -1,5 +1,5 @@
-import classes from './basic-info.module.css';
-import Input from '../../../components/input/Input'
+import classes from './basic-info.module.scss';
+import Input from '../../../shared/components/input/Input'
 
 const BasicInfo = () => {
     return (

@@ -1,21 +1,19 @@
-import classes from "./job-details.module.css";
+import classes from "./job-details.module.scss";
 
 //icons
-import BookmarkIcon from '../../assets/icons/bookmark.svg?react';
-import EyeIcon from "../../assets/icons/eye.svg?react";
-import BuildingIcon from "../../assets/icons/building.svg?react";
-import LocationIcon from "../../assets/icons/location.svg?react";
-import Button from "../button/Button";
-import { jobs, type Job } from "../../data/jobs";
+import BookmarkIcon from '../assets/icons/bookmark.svg?react';
+import EyeIcon from "../assets/icons/eye.svg?react";
+import BuildingIcon from "../assets/icons/building.svg?react";
+import LocationIcon from "../assets/icons/location.svg?react";
+import Button from "../shared/components/button/Button";
+import { jobs, type Job } from "../shared/data/jobs";
 import { useLoaderData } from "react-router";
-import { useMediaQuery } from "react-responsive";
 
 interface jobDetailsProps {
     selectedId?: string;
 }
 
 const JobDetails: React.FC<jobDetailsProps> = ({ selectedId }) => {
-    const isMobile = useMediaQuery({ maxWidth: 1000 });
     const data = useLoaderData();
     // console.log(data);
     const selectedJob: Job = data !== undefined
@@ -26,13 +24,11 @@ const JobDetails: React.FC<jobDetailsProps> = ({ selectedId }) => {
             {
                 selectedJob && (
                     <>
-                        {
-                            isMobile &&
                             <div className={classes.header}>
-                                <h2 className='padding'>Details</h2>
+                                <h2 className='padding'> Job Details</h2>
                             </div>
-                        }
-                        <div className={isMobile ? "padding" : ""} style={{marginTop: isMobile ? "32px": "0"}}>
+                        
+                        <div className={classes.jobDetails}>
                             <div className={classes.jobHeader}>
                                 <h2>{selectedJob.role}</h2>
                                 <div className={classes.location}>

@@ -1,8 +1,8 @@
-import Input from "../components/input/Input";
-import classes from "./job-application.module.css";
+import Input from "../shared/components/input/Input";
+import classes from "./job-application.module.scss";
 import logo from "../assets/treetop-logo.png";
 import pdfImg from "../assets/pdf-image.png";
-import Button from "../components/button/Button";
+import Button from "../shared/components/button/Button";
 const JobApplication = () => {
     return (
         <div className={classes.container}>
@@ -31,9 +31,9 @@ const JobApplication = () => {
                         {/* <div className="tag">Recommended</div> */}
                     </div>
                 </div>
-                <h3>Job that shows relevant experience (optional)</h3>
+                {/* <h3>Job that shows relevant experience (optional)</h3>
                 <Input placeholder="Job title" />
-                <Input placeholder="Company name" />
+                <Input placeholder="Company name" /> */}
 
                 <h3>Employer questions</h3>
 

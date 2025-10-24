@@ -1,6 +1,6 @@
-import Button from "../../../components/button/Button";
-import Input from "../../../components/input/Input"
-import classes from "./education.module.css";
+import Button from "../../../shared/components/button/Button";
+import Input from "../../../shared/components/input/Input"
+import classes from "./education.module.scss";
 const Education = () => {
     return (
         <form className={classes.container}>

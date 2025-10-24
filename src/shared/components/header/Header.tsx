@@ -1,21 +1,24 @@
-import classes from './Header.module.css';
-import logo from '../../assets/treetop-logo.png';
+import classes from './Header.module.scss';
+import logo from '../../../assets/treetop-logo.png';
 
-import BookMarkIcon from "../../assets/icons/bookmark.svg?react";
-import MessageIcon from "../../assets/icons/message.svg?react";
-import NotificationIcon from "../../assets/icons/notification.svg?react";
-import UserIcon from "../../assets/icons/user.svg?react";
-
-
+import BookMarkIcon from "../../../assets/icons/bookmark.svg?react";
+import HomeIcon from "../../../assets/icons/home.svg?react";
+import UserIcon from "../../../assets/icons/user.svg?react";
+import { useState } from 'react';
+import Button from '../button/Button';
 
 const Header = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    
+    function toggleLogin() {
+        setIsLoggedIn((prevState) => !prevState);
+    }
+
     return (
-        <div className={`${classes.container} padding`}>
+        
+       isLoggedIn ? <div className={`${classes.container} padding`}>
             <div className={classes.logo}>
                 <img src={logo} alt="Logo" />
-            </div>
-            <div className={classes.links}>
-                <a href="#home">Home</a>
             </div>
             <div className={classes.searchbar}>
                 <div className={classes.input}>
@@ -27,34 +30,39 @@ const Header = () => {
                 <div className={classes.input}>
                     <i className="fas fa-location-dot"></i>
                     <input type="text" placeholder='Location, or “remote”' />
-                    <button><i className="fas fa-magnifying-glass"></i></button>
+                    <button className={classes.search}><i className="fas fa-magnifying-glass"></i></button>
 
                 </div>
             </div>
             <div className={classes.icons}>
-                <BookMarkIcon width={40}/>
-                <MessageIcon width={40} />
-                <NotificationIcon width={40}/>
-                <UserIcon width={40}/>
+                <HomeIcon height={25} />
+                <BookMarkIcon height={25}/>
+                <UserIcon height={25}/>
             </div>
             <div className={classes.actions}>
             </div>
-
-            {/* <div className={classes.links}>
+        
+         
+        </div>
+        : <div className={`${classes.container} padding`}>
+            <div className={classes.logo}>
+                <img src={logo} alt="Logo" />
+            </div>
+           <div className={classes.links}>
                 <a href="#home">Home</a>
                 <a href="#about">Available Jobs</a>
                 <a href="#services">Blog</a>
-                <a href="#contact">Contact</a>
+                <a href="#contact">Contact Us</a>
             </div>
             <div className={classes.searchbar}>
-                <input type="text" />
+                <input type="text" placeholder='Search' />
                 <button><i className="fas fa-magnifying-glass"></i></button>
             </div>
 
             <div className={classes.actions}>
                 <button className={classes.login}>Sign In</button>
                 <Button bordered={true}>Get Started</Button>
-            </div> */}
+            </div>
         </div>
     )
 }

@@ -1,5 +1,5 @@
-import Button from "../components/button/Button";
-import classes from "./application-preview.module.css";
+import Button from "../shared/components/button/Button";
+import classes from "./application-preview.module.scss";
 
 const ApplicationPreview = () => {
     return (

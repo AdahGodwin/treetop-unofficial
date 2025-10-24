@@ -1,0 +1,101 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    margin-bottom: 22px;
+    font-size: 40px;
+    font-weight: 800;
+  }
+  .header {
+    width: 100%;
+    padding-block: 20px;
+    background-color: var(--primary-500);
+
+    h2 {
+      font-size: 48px;
+      font-weight: 800;
+      color: white;
+
+      @media (max-width: 700px) {
+        font-size: 28px;
+      }
+    }
+  }
+  .jobDetails {
+    border: 1px solid var(--black-100);
+    border-radius: 8px;
+    margin: 32px 1rem;
+    max-width: 1500px;
+    padding: 1rem 0.5rem;
+    .jobHeader {
+      padding: 8px;
+
+      .location {
+        display: flex;
+        gap: 10px;
+        /* align-items: center; */
+      }
+
+      .tags {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        /* max-width: 70%; */
+        gap: 8px 10px;
+
+        .tag {
+          border-radius: 4px;
+          padding: 5px;
+          font-weight: 600;
+          font-size: 12px;
+          color: var(--black-300);
+          background-color: var(--black-50);
+        }
+      }
+
+      p {
+        margin-top: 12px;
+        font-size: 12px;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .jobActions {
+        margin-top: 12px;
+        margin-bottom: 10px;
+        display: flex;
+        gap: 10px;
+        max-width: 250px;
+        .icon {
+          align-content: center;
+          justify-items: center;
+          background-color: var(--black-50);
+          padding: 10px 8px;
+          border-radius: 8px;
+        }
+      }
+    }
+
+    .details {
+      h2 {
+        font-size: 24px;
+        font-weight: 800px;
+        margin-block: 10px;
+      }
+
+      .description {
+        height: 58vh;
+        overflow: auto;
+
+        border: 1px solid var(--black-100);
+        border-radius: 8px;
+        padding: 12px;
+        white-space: pre-line;
+        text-align: left;
+        word-wrap: break-word;
+      }
+    }
+  }
+}

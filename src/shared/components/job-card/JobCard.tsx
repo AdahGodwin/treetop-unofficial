@@ -1,28 +1,30 @@
-import classes from "./job-card.module.css";
+import classes from "./job-card.module.scss";
 
 //icons
-import BookmarkIcon from '../../assets/icons/bookmark.svg?react';
-import EyeIcon from "../../assets/icons/eye.svg?react";
-import BuildingIcon from "../../assets/icons/building.svg?react";
-import LocationIcon from "../../assets/icons/location.svg?react";
-import type { Job } from "../../data/jobs";
+import BookmarkIcon from '../../../assets/icons/bookmark-filled.svg?react';
+import EyeIcon from "../../../assets/icons/eye.svg?react";
+import BuildingIcon from "../../../assets/icons/building.svg?react";
+import LocationIcon from "../../../assets/icons/location.svg?react";
+import type { Job } from "../../../shared/data/jobs";
 
 
 interface JobCardProps {
     job: Job;
     onClick: () => void;
-    isSelected: boolean;
 }
 
-const JobCard: React.FC<JobCardProps> = ({job, onClick, isSelected}) => {
+const JobCard: React.FC<JobCardProps> = ({job, onClick}) => {
+    const isLoggedIn = false;
     return (
-        <div onClick={onClick} className={classes.card} data-selected={isSelected }>
+        <div onClick={onClick} className={classes.card}>
             <div className={classes.cardHeader}>
                 <h3>{job.role}</h3>
-                <div className={classes.icons}>
-                    <BookmarkIcon />
+                {
+                    isLoggedIn && <div className={classes.icons}>
+                    <BookmarkIcon  />
                     <EyeIcon />
                 </div>
+                }
             </div>
             <div className={classes.company}>
                 <BuildingIcon />

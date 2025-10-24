@@ -1,6 +1,6 @@
-import Button from '../../../components/button/Button';
-import Input from '../../../components/input/Input';
-import classes from './certification.module.css';
+import Button from '../../../shared/components/button/Button';
+import Input from '../../../shared/components/input/Input';
+import classes from './certification.module.scss';
 
 const Certification = () => {
     return (

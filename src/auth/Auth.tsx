@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from 'motion/react';;
-import Input from "../components/input/Input";
-import classes from "./auth.module.css";
+import Input from "../shared/components/input/Input";
+import classes from "./auth.module.scss";
 import logo from "../assets/treetop-logo.png";
 import { useMediaQuery } from "react-responsive";
 import ArrowBack from "../assets/icons/arrowBack.svg?react";

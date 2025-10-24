@@ -1,6 +1,6 @@
-import Button from '../../../components/button/Button';
-import Input from '../../../components/input/Input';
-import classes from './skills.module.css';
+import Button from '../../../shared/components/button/Button';
+import Input from '../../../shared/components/input/Input';
+import classes from './skills.module.scss';
 
 const Skills = () => {
     return (

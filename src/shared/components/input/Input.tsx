@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import classes from './Input.module.css';
+import classes from './Input.module.scss';
 
 interface InputProps {
     icon?: string;

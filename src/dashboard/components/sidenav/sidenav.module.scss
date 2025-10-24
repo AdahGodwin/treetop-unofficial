@@ -1,0 +1,19 @@
+.sideNav {
+    top: 0;
+    height: 100vh;
+    position: sticky;
+    .nav {
+    
+        background-color: var(--primary-500);
+      padding-left: 60px;
+      .navItem {
+        padding: 24px;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        font-weight: 800;
+        font-size: 32px;
+      }
+    }
+  }

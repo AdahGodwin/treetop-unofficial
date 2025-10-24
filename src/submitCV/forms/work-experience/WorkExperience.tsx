@@ -1,6 +1,6 @@
-import Button from '../../../components/button/Button';
-import Input from '../../../components/input/Input';
-import classes from './work-experience.module.css';
+import Button from '../../../shared/components/button/Button';
+import Input from '../../../shared/components/input/Input';
+import classes from './work-experience.module.scss';
 const WorkExperience = () => {
     return (
         <form className={classes.container}>

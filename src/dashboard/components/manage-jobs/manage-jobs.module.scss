@@ -1,0 +1,14 @@
+.jobsList {
+    margin-top: 18px;
+    padding-bottom: 2rem;
+    gap: 16px;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* padding-inline: 1rem; */
+
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }

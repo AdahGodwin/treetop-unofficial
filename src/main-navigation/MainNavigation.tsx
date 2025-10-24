@@ -1,4 +1,4 @@
-import Header from '../components/header/Header'
+import Header from '../shared/components/header/Header'
 import { Outlet } from 'react-router'
 
 const MainNavigation = () => {

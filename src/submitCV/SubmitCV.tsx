@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import classes from './submitcv.module.css';
-import Button from '../components/button/Button';
+import classes from './submitcv.module.scss';
+import Button from '../shared/components/button/Button';
 import Certification from './forms/certification/Certification';
 import BasicInfo from './forms/basic-info/BasicInfo';
 import PersonalInfo from './forms/personal-info/PersonalInfo';
