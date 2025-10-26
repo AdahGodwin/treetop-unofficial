@@ -1,0 +1,158 @@
+.eyeIcon path {
+  fill: var(--primary-500);
+}
+
+.container {
+
+  .crumbs {
+    margin-top: 32px;
+    font-size: 20px;
+    font-weight: 600;
+    
+    i {
+      margin-inline: .5rem;
+      font-size: 12px;
+      color: var(--black-200);
+    }
+    .activeTitle {
+      color: var(--primary-500);
+    }
+  }
+  h2 {
+    margin-bottom: 22px;
+    font-size: 40px;
+    font-weight: 800;
+  }
+  .header {
+    width: 100%;
+    padding-block: 20px;
+    background-color: var(--primary-500);
+
+    h2 {
+      font-size: 48px;
+      font-weight: 800;
+      color: white;
+
+      @media (max-width: 700px) {
+        font-size: 28px;
+      }
+    }
+  }
+  .blogDetails {
+    border: 1px solid var(--black-100);
+    border-radius: 8px;
+    margin: 32px 0;
+    padding: 16px;
+
+    h2 {
+      font-size: 48px;
+      font-weight: 800px;
+      margin-bottom: 16px;
+    }
+
+    .content {
+      padding: 12px;
+      white-space: pre-line;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 20px;
+      margin-bottom: 12px;
+
+      .metaItem {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+    }
+
+    .image {
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+      margin: 24px 0;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        // height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+.markdownContainer {
+  // line-height: 1.8;
+  font-size: 1rem;
+  letter-spacing: 0.015em;
+
+  // General spacing
+  > * {
+    margin-bottom: 0.3rem;
+  }
+
+  // Headings
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    padding-bottom: 0.3rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+
+  // Paragraphs
+  p {
+    margin-bottom: 0.1rem;
+  }
+
+  // Lists
+  ul,
+  ol {
+    margin: 1rem 0 1.5rem 2rem;
+    padding-left: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.4rem;
+  }
+
+  // Links
+  a {
+    color: #1b6f5f;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(27, 111, 95, 0.3);
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #0a3d2e;
+      border-color: rgba(27, 111, 95, 0.6);
+    }
+  }
+}

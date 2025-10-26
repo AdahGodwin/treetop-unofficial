@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  .formSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 32px;
+    max-width: 550px;
+    width: 100%;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    label {
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    textarea {
+        height: 136px;
+        padding: 12px;
+    }
+  }
+}

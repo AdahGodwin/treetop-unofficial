@@ -3,7 +3,7 @@ import classes from "./landing-page.module.scss";
 import heroImage from "../assets/hero-image.webp";
 import { jobs } from "../shared/data/jobs";
 import JobCard from "../shared/components/job-card/JobCard";
-import ArrowRight from "../assets/icons/arrow-long-right.svg?react";
+import ArrowRight from "@/assets/icons/arrow-long-right.svg?react";
 import BlogCard from "../shared/components/blog-card/BlogCard";
 import { blogs } from "../shared/data/blog";
 const LandingPage = () => {

@@ -4,10 +4,12 @@ import Input from "../shared/components/input/Input";
 import classes from "./auth.module.scss";
 import logo from "../assets/treetop-logo.png";
 import { useMediaQuery } from "react-responsive";
-import ArrowBack from "../assets/icons/arrowBack.svg?react";
-import { Link } from "react-router";
+import ArrowBack from "@/assets/icons/arrowBack.svg?react";
+import { Link, useLocation } from "react-router";
 
 const Auth: React.FC = () => {
+     const location = useLocation();
+       
     const containerRef = useRef<HTMLDivElement>(null);
     const authFormRef = useRef<HTMLDivElement>(null);
     const authContentRef = useRef<HTMLDivElement>(null);
@@ -24,8 +26,9 @@ const Auth: React.FC = () => {
     const isMobile = useMediaQuery({ maxWidth: 850 });
 
     useEffect(() => {
-        setInitialMode("signup");
-        setIsLogin(false);
+        const { mode, isLogin } = location.state;
+        setInitialMode(mode);
+        setIsLogin(isLogin);
 
         if (!containerRef.current) return;
         const observer = new ResizeObserver((entries) => {
@@ -78,7 +81,7 @@ const Auth: React.FC = () => {
                 flexDirection: rowDirection,
                 borderRadius: isLogin ? "0 16px 16px 0" : "16px 0 0 16px",
             }}>
-                <Link to="/jobs">
+                <Link to="/">
                     <ArrowBack className={classes.arrowBack} />
                 </Link>
                 {

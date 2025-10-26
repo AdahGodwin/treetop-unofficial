@@ -1,10 +1,10 @@
 import classes from "./job-details.module.scss";
 
 //icons
-import BookmarkIcon from '../assets/icons/bookmark.svg?react';
-import EyeIcon from "../assets/icons/eye.svg?react";
-import BuildingIcon from "../assets/icons/building.svg?react";
-import LocationIcon from "../assets/icons/location.svg?react";
+import BookmarkIcon from '@/assets/icons/bookmark.svg?react';
+import EyeIcon from "@/assets/icons/eye.svg?react";
+import BuildingIcon from "@/assets/icons/building.svg?react";
+import LocationIcon from "@/assets/icons/location.svg?react";
 import Button from "../shared/components/button/Button";
 import { jobs, type Job } from "../shared/data/jobs";
 import { useLoaderData } from "react-router";

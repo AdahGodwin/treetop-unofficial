@@ -1,39 +1,28 @@
+import { navConfig } from "../../../shared/data/nav-config";
 import classes from "./sidenav.module.scss";
-import UsersIcon from "../../../assets/icons/users-2.svg?react";
-import FileIcon from "../../../assets/icons/file.svg?react";
-import OverViewIcon from "../../../assets/icons/overview.svg?react";
-import Logout from "../../../assets/icons/logout.svg?react";
+import placeholderAvatar from "@/assets/placeholder_img.png";
 
-const navItems = [
-  {
-    name: "Manage job Seeker",
-    icon: <UsersIcon width={32} />,
-    route: "job-seekers",
-  },
-  {
-    name: "Manage Application",
-    icon: <FileIcon width={32} />,
-    route: "all-applications",
-  },
-  {
-    name: "System Overview",
-    icon: <OverViewIcon width={32} />,
-    route: "system-overview",
-  },
-  {
-    name: "Logout",
-    icon: <Logout width={32} />,
-    route: "/logout",
-  },
-];
+const userRole = "employee"; // This would typically come from user context or props
+const navItems = navConfig[userRole];
 
 const SideNav = () => {
   return (
     <div className={classes.sideNav}>
+      <div className={classes.userInfo}>
+        
+        <div className={classes.profilePic}>
+          <div className={classes.circleMask}></div>
+             <img src={placeholderAvatar} alt="User Avatar" />
+        </div>
+
+        <span className={classes.userName}>John Doe</span>
+        <span className={classes.userRole}>Employee</span>
+      </div>
       <div className={classes.nav}>
+        
         {navItems.map((item) => (
           <section key={item.route} className={classes.navItem}>
-            {item.icon}
+            {item.icon && <item.icon width={32} height={38} className={classes.icon} />}
             <span>{item.name}</span>
           </section>
         ))}
