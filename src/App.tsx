@@ -22,6 +22,8 @@ import EmployerProfile from "./dashboard/components/employer-profile/EmployerPro
 import EmployeeProfile from "./dashboard/components/employee-profile/EmployeeProfile.tsx";
 import SavedJobs from "./dashboard/components/saved-jobs/SavedJobs.tsx";
 import ManageApplications from "./dashboard/components/manage-applications/ManageApplications.tsx";
+import ApplicationPreview from "./dashboard/components/application-preview/ApplicationPreview.tsx";
+import { applications } from "./shared/data/applications.ts";
 
 // import JobApplication from './job-application/JobApplication';
 const router = createBrowserRouter([
@@ -84,11 +86,20 @@ const router = createBrowserRouter([
         Component: Dashboard,
         children: [
           {
-            "path": "admin",
+            path: "admin",
             children: [
               {
                 path: "manage-job-posts",
                 Component: ManageJobs,
+              },
+              {
+                path: "manage-job-posts/:jobId",
+                Component: JobDetails,
+                loader: async ({ params }) => {
+                  // params are available in loaders/actions
+                  const job = jobs.find((job) => job.id === params.jobId);
+                  return { job };
+                },
               },
               {
                 path: "manage-job-seekers",
@@ -98,8 +109,16 @@ const router = createBrowserRouter([
                 path: "all-applications",
                 Component: ManageApplications,
               },
-            ]
- 
+              {
+                path: "all-applications/:applicationId",
+                Component: ApplicationPreview,
+                loader: async ({ params }) => {
+                  // params are available in loaders/actions
+                  const application = applications.find((application) => application.id === params.applicationId);
+                  return { application };
+                },
+              },
+            ],
           },
           {
             path: "employer",
@@ -112,8 +131,16 @@ const router = createBrowserRouter([
                 path: "jobs-posted",
                 Component: ManageJobs,
               },
-
-            ]
+              {
+                path: "jobs-posted/:jobId",
+                Component: JobDetails,
+                loader: async ({ params }) => {
+                  // params are available in loaders/actions
+                  const job = jobs.find((job) => job.id === params.jobId);
+                  return { job };
+                },
+              },
+            ],
           },
           {
             path: "employee",
@@ -127,14 +154,31 @@ const router = createBrowserRouter([
                 Component: SavedJobs,
               },
               {
-                path: "my-application",
-                Component: ManageApplications
+                path: "saved-jobs/:jobId",
+                Component: JobDetails,
+                loader: async ({ params }) => {
+                  // params are available in loaders/actions
+                  const job = jobs.find((job) => job.id === params.jobId);
+                  return { job };
+                },
               },
-            ]
-          }
+              {
+                path: "my-applications",
+                Component: ManageApplications,
+              },
+              {
+                path: "my-applications/:applicationId",
+                Component: ApplicationPreview,
+                loader: async ({ params }) => {
+                  // params are available in loaders/actions
+                  const application = applications.find((application) => application.id === params.applicationId);
+                  return { application };
+                },
+              },
+            ],
+          },
         ],
       },
-      
     ],
   },
 ]);

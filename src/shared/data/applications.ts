@@ -1,0 +1,148 @@
+export interface Application {
+  id: string;
+  applicantName: string;
+  jobTitle: string;
+  companyName: string;
+  location: string;
+  status: "Pending" | "Approved" | "Declined";
+  dateApplied: string;
+  phone: string;
+  visited: string;
+}
+
+
+export const applications: Application[] = [
+  {
+    id: "1",
+    applicantName: "John Doe",
+    jobTitle: "Frontend Developer",
+    companyName: "TechNova Solutions",
+    location: "Lagos, Nigeria",
+    status: "Pending",
+    dateApplied: "2025-10-12",
+    phone: "+234 801 234 5678",
+    visited: "Visited 1 day ago",
+  },
+  {
+    id: "2",
+    applicantName: "Jane Smith",
+    jobTitle: "Backend Engineer",
+    companyName: "CloudAxis",
+    location: "Abuja, Nigeria",
+    status: "Approved",
+    dateApplied: "2025-10-10",
+    phone: "+234 902 345 6789",
+    visited: "Visited 1 day ago",
+  },
+  {
+    id: "3",
+    applicantName: "Michael Johnson",
+    jobTitle: "UI/UX Designer",
+    companyName: "CreativeLabs",
+    location: "Port Harcourt, Nigeria",
+    status: "Declined",
+    dateApplied: "2025-10-08",
+    phone: "+234 703 111 2222",
+    visited: "Visited 1 day ago",
+  },
+  {
+    id: "4",
+    applicantName: "Grace Emmanuel",
+    jobTitle: "Mobile App Developer",
+    companyName: "SoftNest Ltd",
+    location: "Ibadan, Nigeria",
+    status: "Pending",
+    dateApplied: "2025-10-14",
+    phone: "+234 705 876 5432",
+    visited: "Visited 1 day ago",
+  },
+  {
+    id: "5",
+    applicantName: "David Oluwole",
+    jobTitle: "Full Stack Engineer",
+    companyName: "InnovateX",
+    location: "Lagos, Nigeria",
+    status: "Approved",
+    dateApplied: "2025-10-11",
+    phone: "+234 802 334 5566",
+    visited: "Visited 1 day ago",
+  },
+  {
+    id: "6",
+    applicantName: "Sophia Okeke",
+    jobTitle: "Project Manager",
+    companyName: "AgileWorks",
+    location: "Enugu, Nigeria",
+    status: "Pending",
+    dateApplied: "2025-10-09",
+    phone: "+234 809 111 2233",
+    visited: "Visited 1 day ago",
+  },
+  {
+    id: "7",
+    applicantName: "Emmanuel Uche",
+    jobTitle: "DevOps Engineer",
+    companyName: "CodeForge",
+    location: "Abuja, Nigeria",
+    status: "Approved",
+    dateApplied: "2025-10-13",
+    phone: "+234 708 777 8888",
+    visited: "Visited 1 day ago",
+  },
+  {
+    id: "8",
+    applicantName: "Chidinma Peters",
+    jobTitle: "QA Tester",
+    companyName: "DebugLabs",
+    location: "Benin City, Nigeria",
+    status: "Declined",
+    dateApplied: "2025-10-07",
+    phone: "+234 803 123 4567",
+    visited: "Visited 1 day ago",
+  },
+  {
+    id: "9",
+    applicantName: "Kelvin Adeyemi",
+    jobTitle: "Data Analyst",
+    companyName: "Insight360",
+    location: "Lagos, Nigeria",
+    status: "Pending",
+    dateApplied: "2025-10-05",
+    phone: "+234 901 222 3344",
+    visited: "Visited 1 day ago",
+  },
+  {
+    id: "10",
+    applicantName: "Blessing Eze",
+    jobTitle: "Product Designer",
+    companyName: "PixelHive",
+    location: "Uyo, Nigeria",
+    status: "Approved",
+    dateApplied: "2025-10-15",
+    phone: "+234 704 987 6543",
+    visited: "Visited 1 day ago",
+  },
+  {
+    id: "11",
+    applicantName: "Francis Obi",
+    jobTitle: "Cybersecurity Analyst",
+    companyName: "SecureNet",
+    location: "Abuja, Nigeria",
+    status: "Declined",
+    dateApplied: "2025-10-06",
+    phone: "+234 802 555 6666",
+    visited: "Visited 1 day ago",
+  },
+  {
+    id: "12",
+    applicantName: "Oluwatobi Akin",
+    jobTitle: "Backend Developer",
+    companyName: "TechCraft",
+    location: "Ilorin, Nigeria",
+    status: "Pending",
+    dateApplied: "2025-10-03",
+    phone: "+234 708 909 1011",
+    visited: "Visited 1 day ago",
+  },
+];
+

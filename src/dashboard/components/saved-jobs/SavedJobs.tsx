@@ -1,8 +1,25 @@
+import { useState } from "react";
+import JobCard from "../../../shared/components/job-card/JobCard";
+import classes from "./saved-jobs.module.scss";
+import { jobs } from "../../../shared/data/jobs";
+import { useLocation, useNavigate } from "react-router";
 
 const SavedJobs = () => {
-  return (
-    <div>SavedJobs</div>
-  )
-}
+  const navigate = useNavigate();
+  const location = useLocation();
 
-export default SavedJobs
+  const [availableJobs] = useState(jobs);
+  function setJobId(id: string) {
+    const route = location.pathname;
+    navigate(`${route}/${id}`);
+  }
+  return (
+    <div className={classes.jobsList}>
+      {availableJobs.map((job) => (
+        <JobCard onClick={() => setJobId(job.id)} key={job.id} job={job} />
+      ))}
+    </div>
+  );
+};
+
+export default SavedJobs;

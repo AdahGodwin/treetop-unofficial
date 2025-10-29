@@ -33,7 +33,7 @@ const Header = () => {
       <div className={classes.icons}>
         <HomeIcon height={25} />
         {/* <BookMarkIcon height={25} /> */}
-        <UserIcon height={25} />
+        <UserIcon className={classes.icon} height={25} />
         <div className={classes.postJob}>
             <Button> <AddIcon className={classes.icon} /></Button>
             Post Job

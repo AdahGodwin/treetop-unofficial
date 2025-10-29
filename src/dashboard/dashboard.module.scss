@@ -8,6 +8,7 @@
     background-color: var(--primary-500);
 
     h2 {
+      text-transform: capitalize;
       font-size: 48px;
       font-weight: 800;
       color: white;
@@ -21,5 +22,9 @@
   .content {
     display: flex;
     gap: 2rem;
+
+    .mainView {
+      flex: 1;
+    }
   }
 }

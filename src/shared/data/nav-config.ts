@@ -6,7 +6,7 @@ import Logout from "@/assets/icons/logout.svg?react";
 import ApplicationIcon from "@/assets/icons/applications.svg?react";
 import AddIcon from "@/assets/icons/add.svg?react";
 export const navConfig = {
-  employee: [
+  "employee": [
     {
       name: "Profile Settings",
       icon: UserIcon,
@@ -28,7 +28,7 @@ export const navConfig = {
       route: "/logout",
     },
   ],
-  employer: [
+  "employer": [
     {
       name: "Profile Settings",
       icon: UserIcon,
@@ -45,7 +45,7 @@ export const navConfig = {
       route: "/logout",
     },
   ],
-  admin: [
+  "admin": [
     {
       name: "Manage Job Posts",
       icon: UserIcon,

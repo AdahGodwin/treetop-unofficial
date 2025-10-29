@@ -1,0 +1,59 @@
+.employeeCard {
+    border: 1px solid var(--black-100);
+    border-radius: 8px;
+    padding: 20px 10px;
+    margin-block: 32px;
+  h3 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 22px;
+    padding-inline: 8px;
+    @media (max-width: 500px) {
+      font-size: 24px;
+    }
+  }
+
+  .detailRow {
+    padding-inline: 8px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 20px;
+
+    @media (max-width: 500px) {
+      font-size: 18px;
+    }
+  }
+
+  p {
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    padding-inline: 8px;
+  }
+
+  .statistics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    .jobsPosted,
+    .applicationsReceived {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+
+      h4 {
+        font-size: 20px;
+        font-weight: 800;
+      }
+      span {
+        font-size: 72px;
+        font-weight: 400;
+      }
+    }
+  }
+}

@@ -17,7 +17,7 @@ interface JobCardProps {
 
 const JobCard: React.FC<JobCardProps> = ({job, onClick}) => {
     const isLoggedIn = true;
-    let userRole: string = "admin"; // or 'employer'
+    let userRole: string = "employer"; // or 'employer'
     return (
         <div onClick={onClick} className={classes.card}>
             <div className={classes.cardHeader}>

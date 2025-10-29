@@ -3,10 +3,11 @@ import SideNav from "./components/sidenav/SideNav";
 import classes from "./dashboard.module.scss";
 
 const Dashboard = () => {
+  const userRole = "employee"; // This would typically come from user context or props
   return (
     <div className={classes.container}>
       <div className={classes.header}>
-        <h2 className="padding">Admin Dashboard</h2>
+        <h2 className="padding">{userRole} Dashboard</h2>
       </div>
 
       <div className={`${classes.content} padding`}>
@@ -14,11 +15,9 @@ const Dashboard = () => {
         <div className={classes.mainView}>
           <div className={classes.contentHeader}>
             <div className={classes.crumbs}>job Summary</div>
-            <div className={classes.filters}>
-                
-            </div>
+            <div className={classes.filters}></div>
           </div>
-          <Outlet />
+            <Outlet />
         </div>
       </div>
     </div>

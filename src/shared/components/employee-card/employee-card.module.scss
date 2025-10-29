@@ -1,0 +1,51 @@
+.employeeCard {
+  border: 1px solid var(--black-100);
+  padding: 18px;
+  border-radius: 8px;
+  font-style: normal;
+
+  &:hover {
+    border-color: var(--black-300);
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16);
+  }
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+
+    h3 {
+      font-size: 32px;
+      font-weight: 800;
+
+      @media (max-width: 500px) {
+        font-size: 24px;
+      }
+    }
+
+    .icons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  .detailRow {
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 20px;
+
+    @media (max-width: 500px) {
+      font-size: 18px;
+    }
+  }
+
+  p {
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
