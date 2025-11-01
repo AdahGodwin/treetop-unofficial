@@ -3,7 +3,7 @@ import SideNav from "./components/sidenav/SideNav";
 import classes from "./dashboard.module.scss";
 
 const Dashboard = () => {
-  const userRole = "employee"; // This would typically come from user context or props
+  const userRole = "admin"; // This would typically come from user context or props
   return (
     <div className={classes.container}>
       <div className={classes.header}>
@@ -17,7 +17,9 @@ const Dashboard = () => {
             <div className={classes.crumbs}>job Summary</div>
             <div className={classes.filters}></div>
           </div>
-            <Outlet />
+           <div className={classes.outlet}>
+             <Outlet />
+           </div>
         </div>
       </div>
     </div>

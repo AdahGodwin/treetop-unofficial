@@ -4,7 +4,7 @@ import classes from "./sidenav.module.scss";
 import placeholderAvatar from "@/assets/placeholder_img.png";
 
 const SideNav = () => {
-  const userRole: keyof typeof navConfig = "employer"; // This would typically come from user context or props
+  const userRole: keyof typeof navConfig = "employee"; // This would typically come from user context or props
   const navItems = navConfig[userRole];
   const navigate = useNavigate();
   const location = useLocation();

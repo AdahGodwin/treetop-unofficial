@@ -1,0 +1,86 @@
+.section {
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--black-200);
+}
+
+.card {
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 1rem;
+  margin-top: 10px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black-300);
+}
+
+.disabledBox {
+  background: var(--black-50);
+  color: var(--black-200);
+  border: none;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: #00796b;
+  }
+}
+.dateRow {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.dateBox {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-width: 200px;
+  
+  label {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+  }
+}
+.boxVal {
+  flex: 1;
+  min-width: 140px;
+  border: 1px solid var(--black-100);
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.description {
+  .boxVal {
+    margin-top: 10px;
+  }
+}
+.empty {
+  color: #777;
+  font-size: 0.9rem;
+}

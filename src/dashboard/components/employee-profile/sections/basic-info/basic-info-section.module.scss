@@ -1,0 +1,24 @@
+.section {
+  padding-top: 1rem;
+  border-top: 1px solid var(--black-50);
+  margin-top: 1rem;
+}
+.heading {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+.subtitle {
+  font-size: 20px;
+  color: var(--black-300);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.textBox {
+    font-size: 20px;
+  background: #fff;
+  border: 1px solid var(--black-100);
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}

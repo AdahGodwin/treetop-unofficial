@@ -4,6 +4,9 @@
     padding: 18px;
     border-radius: 8px;
     font-style: normal;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
 
     &:hover {
         border-color: var(--black-300);
@@ -37,10 +40,11 @@
             gap: 10px;
         }
     }
-
+// .content {
     .company {
         margin-top: 12px;
         display: flex;
+        align-items: center;
         gap: 10px;
         font-weight: 400;
         font-size: 20px;
@@ -53,6 +57,7 @@
     .location {
         margin-top: 8px;
         display: flex;
+        align-items: center;
         gap: 10px;
         font-weight: 400;
         font-size: 20px;
@@ -85,3 +90,4 @@
         font-weight: 400;
     }
 }
+// }
