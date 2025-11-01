@@ -9,7 +9,7 @@ import Button from "../button/Button";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
-  const [isLoggedIn] = useState(true);
+  const [isLoggedIn] = useState(false);
 
   return isLoggedIn ? (
     <div className={`${classes.container} padding`}>
@@ -31,13 +31,19 @@ const Header = () => {
         </div>
       </div>
       <div className={classes.icons}>
-        <HomeIcon height={25} />
+        <NavLink to="/jobs" className={({ isActive }) => (isActive ? classes.active : "")}>
+          <HomeIcon height={25} />
+        </NavLink>
         {/* <BookMarkIcon height={25} /> */}
-        <UserIcon className={classes.icon} height={25} />
-        <div className={classes.postJob}>
+        <NavLink to="/dashboard" className={({ isActive }) => (isActive ? classes.active : "")}>
+          <UserIcon className={classes.icon} height={25} />
+        </NavLink>
+       <NavLink to="/post-job">
+         <div className={classes.postJob}>
             <Button> <AddIcon className={classes.icon} /></Button>
             Post Job
         </div>
+       </NavLink>
       </div>
       <div className={classes.actions}></div>
     </div>

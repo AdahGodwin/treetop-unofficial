@@ -8,18 +8,20 @@ import type { Employee } from "../../data/employee";
 
 interface EmployeeCardProps {
   employee: Employee;
-  onApprove?: (id: number) => void;
-  onDecline?: (id: number) => void;
+  onClick: () => void;
+  onApprove?: (id: string) => void;
+  onDecline?: (id: string) => void;
 }
 
 export const EmployeeCard: React.FC<EmployeeCardProps> = ({
   employee,
+  onClick,
 }) => {
-  const {name, jobRole, location, phone, lastVisited } = employee;
+  const {name, jobRole, location, phone, lastVisited} = employee;
     const showAdminIcons = true;
 
   return (
-    <div className={classes.employeeCard}>
+    <div onClick={onClick}  className={classes.employeeCard} >
       <div className={classes.cardHeader}>
         <h3>{name}</h3>
 

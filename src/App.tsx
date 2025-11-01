@@ -24,6 +24,7 @@ import SavedJobs from "./dashboard/components/saved-jobs/SavedJobs.tsx";
 import ManageApplications from "./dashboard/components/manage-applications/ManageApplications.tsx";
 import ApplicationPreview from "./dashboard/components/application-preview/ApplicationPreview.tsx";
 import { applications } from "./shared/data/applications.ts";
+import { employees } from "./shared/data/employee.ts";
 
 // import JobApplication from './job-application/JobApplication';
 const router = createBrowserRouter([
@@ -104,6 +105,15 @@ const router = createBrowserRouter([
               {
                 path: "manage-job-seekers",
                 Component: ManageSeekers,
+              },
+              {
+                path: "manage-job-seekers/:seekerId",
+                Component: EmployeeProfile,
+                loader: async ({ params }) => {
+                  // params are available in loaders/actions
+                  const seeker = employees.find((seeker) => seeker.id === params.seekerId);
+                  return { seeker };
+                },
               },
               {
                 path: "all-applications",

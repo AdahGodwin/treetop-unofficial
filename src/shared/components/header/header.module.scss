@@ -69,6 +69,18 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    
+    a {
+      color: var(--black-500);
+      padding: 4px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+      
+      path {
+        transition: fill 0.3s ease;
+      }
+    }
+    
     .postJob {
       display: flex;
       justify-content: center;
@@ -97,10 +109,13 @@
     }
   }
 
-  .activeLink {
-    color: var(--primary-500);
-    font-size: 40px;
+  .active {
+    color: var(--primary-500) !important;
+    border-bottom-color: var(--primary-500) !important;
+    
+    path {
+      fill: var(--primary-500) !important;
+    }
   }
 
-  
 }

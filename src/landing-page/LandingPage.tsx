@@ -6,7 +6,15 @@ import JobCard from "../shared/components/job-card/JobCard";
 import ArrowRight from "@/assets/icons/arrow-long-right.svg?react";
 import BlogCard from "../shared/components/blog-card/BlogCard";
 import { blogs } from "../shared/data/blog";
+import { NavLink, useNavigate } from "react-router";
+
 const LandingPage = () => {
+  const navigate = useNavigate();
+
+  function navigateToPage(path: string, id: string) {
+      navigate(`${path}/${id}`);
+  }
+  
   return (
     <div className={classes.container}>
       {/* Hero section */}
@@ -34,12 +42,14 @@ const LandingPage = () => {
         <h2>Available jobs</h2>
         <div className={classes.jobs}>
           {jobs.slice(0, 6).map((job) => (
-            <JobCard job={job} key={job.id} onClick={() => null} />
+            <JobCard job={job} key={job.id} onClick={() => navigateToPage("/jobs", job.id)} />
           ))}
         </div>
-        <button className={classes.seeMoreButton}>
+        <NavLink to="/jobs">
+          <button className={classes.seeMoreButton}>
           See more jobs <ArrowRight />{" "}
         </button>
+        </NavLink>
       </div>
 
       {/* Expert Insights Section */}
@@ -47,12 +57,14 @@ const LandingPage = () => {
         <h2>Expert Insights</h2>
         <div className={classes.blogs}>
           {blogs.slice(0, 3).map((blog) => (
-            <BlogCard blog={blog} key={blog.id} onReadMore={() => null} />
+            <BlogCard blog={blog} key={blog.id} onReadMore={() => navigateToPage("/blogs", blog.id)} />
           ))}
         </div>
-        <button className={classes.seeMoreButton}>
-          See more expert insights <ArrowRight />{" "}
-        </button>
+        <NavLink to="/blogs">
+              <button className={classes.seeMoreButton}>
+              See more expert insights <ArrowRight />{" "}
+            </button>
+        </NavLink>
       </div>
 
     </div>
